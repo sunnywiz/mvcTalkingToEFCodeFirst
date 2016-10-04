@@ -17,7 +17,7 @@ namespace MvcEFCodeFirstCRUD
         // GET: Planets
         public ActionResult Index()
         {
-            return View(db.Categories.ToList());
+            return View(db.Planets.ToList());
         }
 
         // GET: Planets/Details/5
@@ -27,7 +27,7 @@ namespace MvcEFCodeFirstCRUD
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Planet planet = db.Categories.Find(id);
+            Planet planet = db.Planets.Find(id);
             if (planet == null)
             {
                 return HttpNotFound();
@@ -50,7 +50,7 @@ namespace MvcEFCodeFirstCRUD
         {
             if (ModelState.IsValid)
             {
-                db.Categories.Add(planet);
+                db.Planets.Add(planet);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +65,7 @@ namespace MvcEFCodeFirstCRUD
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Planet planet = db.Categories.Find(id);
+            Planet planet = db.Planets.Find(id);
             if (planet == null)
             {
                 return HttpNotFound();
@@ -96,7 +96,7 @@ namespace MvcEFCodeFirstCRUD
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Planet planet = db.Categories.Find(id);
+            Planet planet = db.Planets.Find(id);
             if (planet == null)
             {
                 return HttpNotFound();
@@ -109,8 +109,8 @@ namespace MvcEFCodeFirstCRUD
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Planet planet = db.Categories.Find(id);
-            db.Categories.Remove(planet);
+            Planet planet = db.Planets.Find(id);
+            db.Planets.Remove(planet);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

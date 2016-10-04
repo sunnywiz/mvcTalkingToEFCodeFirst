@@ -15,6 +15,6 @@ namespace MvcEFCodeFirstCRUD.Models
 
     public class PlanetContext : DbContext
     {
-        public DbSet<Planet> Categories { get; set; }
+        public DbSet<Planet> Planets { get; set; }
     }
 }
