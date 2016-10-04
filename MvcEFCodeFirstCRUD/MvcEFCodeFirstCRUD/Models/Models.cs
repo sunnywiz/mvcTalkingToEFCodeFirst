@@ -37,20 +37,6 @@ namespace MvcEFCodeFirstCRUD.Models
                     context.SaveChanges();
                 }
             }
-            //protected override void Seed(PlanetContext dbContext)
-            //{
-            //    // seed data
-            //    base.Seed(dbContext);
-            //    if (!dbContext.Planets.Any(x=>x.Name=="Earth"))
-            //    {
-            //        dbContext.Planets.Add(new Models.Planet()
-            //        {
-            //            Name = "Earth",
-            //            Population = 7000000000L
-            //        });
-            //        dbContext.SaveChanges();
-            //    }
-            //}
 
         }
     }
